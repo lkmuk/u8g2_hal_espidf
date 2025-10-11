@@ -76,11 +76,15 @@ void app_main(void)
   ESP_LOGI(TAG, "Switching all pixels on");
   resetAllPixels(&panel1, true, 128, 64);
   resetAllPixels(&panel2, true, 128, 64);
+  u8g2_SendBuffer(&panel1);
+  u8g2_SendBuffer(&panel2);
   vTaskDelay(pdMS_TO_TICKS(1000));
   // leave the right and bottom edges lit up (just for fun)
   ESP_LOGI(TAG, "Switching most pixels off");
   resetAllPixels(&panel1, false, 128-8, 64-8);
   resetAllPixels(&panel2, false, 128-8, 64-8);
+  u8g2_SendBuffer(&panel1);
+  u8g2_SendBuffer(&panel2);
   vTaskDelay(pdMS_TO_TICKS(200));
 
   ESP_LOGI(TAG, "Watch the numbers rolling!");
