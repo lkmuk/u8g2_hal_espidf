@@ -1,0 +1,13 @@
+build/
+
+.vscode/
+
+sdkconfig.old
+
+deps/
+
+dependencies.lock
+managed_components/
+
+*.out
+*.log

@@ -1,0 +1,11 @@
+idf_component_register(
+	SRCS 
+		src/u8g2_hal_espidf.cc 
+	INCLUDE_DIRS 
+		"include"
+	REQUIRES 
+		u8g2
+		esp_driver_i2c 
+		esp_driver_gpio
+		freertos 
+)

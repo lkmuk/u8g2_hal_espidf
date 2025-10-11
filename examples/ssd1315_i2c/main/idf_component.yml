@@ -1,0 +1,5 @@
+dependencies:
+  u8g2_hal_espidf:
+    path: ../../../../u8g2_hal_espidf
+  u8g2:
+    git: https://github.com/olikraus/u8g2.git
