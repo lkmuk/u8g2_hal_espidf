@@ -78,6 +78,11 @@ namespace u8g2_hal
       return i2c_master_bus_add_device(busHandle, &cfg, &m_hDisp);
     }
 
+    esp_err_t deinit()
+    {
+      return i2c_master_bus_rm_device(m_hDisp);
+    }
+
     uint8_t i2c_byte_cb(
         u8x8_t *u8x8,
         uint8_t msg,
